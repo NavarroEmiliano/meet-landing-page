@@ -62,7 +62,8 @@ button {
         place-items: center;
         inline-size: 3.5rem;
         block-size: 3.5rem;
-        outline: 1px solid variables.$slate-300;
+        border: 1px solid variables.$slate-300;
         border-radius: 50%;
+        background-color: variables.$white;
     }
 }

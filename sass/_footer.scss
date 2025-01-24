@@ -1,0 +1,53 @@
+@use 'variables';
+@use 'mixins';
+
+
+
+.footer {
+    position: relative;
+    display: flex;
+    inline-size: 100%;
+    flex-direction: column;
+    text-align: center;
+
+    .number {
+        margin-bottom: -28px
+    }
+
+    &__content {
+        display: grid;
+        place-items: center;
+        gap: 1.5rem;
+        height: 374px;
+        padding-inline: 2rem;
+        padding-block: 4rem;
+
+  
+
+        .title {
+            @include mixins.text-preset-2;
+            font-weight: 900;
+            color: variables.$white;
+        }
+
+        .img-container {
+            position: absolute;
+            background-color: red;
+            width: 100%;
+            block-size: 374px;
+            inset-block-end: 0;
+            z-index: -1;
+        }
+
+        .bg-image {
+            block-size: auto;
+            object-fit: cover;
+        }
+
+        button {
+            background-color: variables.$purple-600;
+        }
+    }
+
+
+}
