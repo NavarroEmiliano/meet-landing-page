@@ -40,3 +40,29 @@ button {
     }
 
 }
+
+
+.number {
+    @include mixins.text-preset-5;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto 3.5rem;
+    position: relative;
+    block-size: 8.5rem;
+    font-weight: 900;
+    color: variables.$slate-600;
+    .vertical-line {
+        justify-self: center;
+        width: 1px;
+        background-color: variables.$slate-300;
+    }
+
+    .circle {
+        display: grid;
+        place-items: center;
+        inline-size: 3.5rem;
+        block-size: 3.5rem;
+        outline: 1px solid variables.$slate-300;
+        border-radius: 50%;
+    }
+}
