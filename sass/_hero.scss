@@ -1,15 +1,18 @@
+@use 'variables';
+@use 'mixins';
+
 .hero {
     display: grid;
     grid-template-columns: 1fr;
-    align-content: center;
+    place-items: center;
     padding-block-start: 4rem;
     padding-block-end: 2rem;
-    row-gap: 3rem;
+    row-gap: clamp(3rem, 3rem + 5vw, 4.5rem);
     overflow-x: hidden;
 
     &__img-container {
-        inline-size: 110vw;
-        transform: translateX(-5vw);
+        /*         inline-size: 115vw;
+        transform: translateX(-7.5vw); */
         display: flex;
         justify-content: center;
         max-block-size: 19rem;
@@ -17,6 +20,55 @@
     }
 
     &__content {
-        padding-inline: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-inline: 2rem;
+        text-align: center;
+        max-inline-size: 28rem;
+
+        h1 {
+            @include mixins.text-preset-2;
+            font-weight: 900;
+            max-width: 10ch;
+            color: variables.$slate-900;
+        }
+
+        h2 {
+            @include mixins.text-preset-4;
+            font-weight: 400;
+            color: variables.$slate-600;
+        }
     }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        inline-size: 100%;
+        max-inline-size: 23rem;
+
+        :nth-child(1) {
+            background-color: variables.$cyan-600;
+        }
+
+        :nth-child(2) {
+            background-color: variables.$purple-600;
+        }
+    }
+}
+
+
+button {
+    padding-block: 1rem;
+    padding-inline: 2.5rem;
+    border-radius: 1.8rem;
+    border: none;
+    @include mixins.text-preset-5;
+    font-weight: 900;
+    color: variables.$white;
+
 }

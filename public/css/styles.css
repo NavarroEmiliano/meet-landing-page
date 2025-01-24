@@ -39,21 +39,69 @@ picture {
 .hero {
   display: grid;
   grid-template-columns: 1fr;
-  align-content: center;
+  place-items: center;
   padding-block-start: 4rem;
   padding-block-end: 2rem;
-  row-gap: 3rem;
+  row-gap: clamp(3rem, 3rem + 5vw, 4.5rem);
   overflow-x: hidden;
 }
 .hero__img-container {
-  inline-size: 110vw;
-  transform: translateX(-5vw);
+  /*         inline-size: 115vw;
+  transform: translateX(-7.5vw); */
   display: flex;
   justify-content: center;
   max-block-size: 19rem;
 }
 .hero__content {
-  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-inline: 2rem;
+  text-align: center;
+  max-inline-size: 28rem;
+}
+.hero__content h1 {
+  font-size: clamp(1.5rem, 1.5rem + 5vw, 4rem);
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 900;
+  max-width: 10ch;
+  color: #28283D;
+}
+.hero__content h2 {
+  font-size: 1.125rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 400;
+  color: #87879D;
+}
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  inline-size: 100%;
+  max-inline-size: 23rem;
+}
+.hero .buttons :nth-child(1) {
+  background-color: #4D96A9;
+}
+.hero .buttons :nth-child(2) {
+  background-color: #855FB1;
+}
+
+button {
+  padding-block: 1rem;
+  padding-inline: 2.5rem;
+  border-radius: 1.8rem;
+  border: none;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: 900;
+  color: #FAFAFA;
 }
 
 /*# sourceMappingURL=styles.css.map */
