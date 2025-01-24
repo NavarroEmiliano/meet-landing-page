@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    block-size: 4.75rem;
+
+    &__logo {
+        block-size: 28px;
+    }
+
+    @media (width > 48rem) {
+        block-size: 6.75rem;
+    }
+}

@@ -1,0 +1,24 @@
+@use 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", serif;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    min-block-size: 100vh;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
