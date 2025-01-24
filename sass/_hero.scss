@@ -1,0 +1,22 @@
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding-block-start: 4rem;
+    padding-block-end: 2rem;
+    row-gap: 3rem;
+    overflow-x: hidden;
+
+    &__img-container {
+        inline-size: 110vw;
+        transform: translateX(-5vw);
+        display: flex;
+        justify-content: center;
+        max-block-size: 19rem;
+
+    }
+
+    &__content {
+        padding-inline: 2rem;
+    }
+}

@@ -17,8 +17,8 @@ body {
 
 img,
 picture {
-  max-width: 100%;
-  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
 }
 
 .header {
@@ -34,6 +34,26 @@ picture {
   .header {
     block-size: 6.75rem;
   }
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  padding-block-start: 4rem;
+  padding-block-end: 2rem;
+  row-gap: 3rem;
+  overflow-x: hidden;
+}
+.hero__img-container {
+  inline-size: 110vw;
+  transform: translateX(-5vw);
+  display: flex;
+  justify-content: center;
+  max-block-size: 19rem;
+}
+.hero__content {
+  padding-inline: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
