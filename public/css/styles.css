@@ -103,5 +103,8 @@ button {
   font-weight: 900;
   color: #FAFAFA;
 }
+button span {
+  color: #8FE3F9;
+}
 
 /*# sourceMappingURL=styles.css.map */
