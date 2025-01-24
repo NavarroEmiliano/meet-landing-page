@@ -21,6 +21,21 @@ picture {
   block-size: auto;
 }
 
+button {
+  padding-block: 1rem;
+  padding-inline: 2.5rem;
+  border-radius: 1.8rem;
+  border: none;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: 900;
+  color: #FAFAFA;
+}
+button span {
+  color: #8FE3F9;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -63,7 +78,7 @@ picture {
   max-inline-size: 28rem;
 }
 .hero__content h1 {
-  font-size: clamp(1.5rem, 1.5rem + 5vw, 4rem);
+  font-size: clamp(1.5rem, 1.5rem + 3vw, 4rem);
   line-height: 110%;
   letter-spacing: 0px;
   font-weight: 900;
@@ -92,19 +107,77 @@ picture {
   background-color: #855FB1;
 }
 
-button {
-  padding-block: 1rem;
-  padding-inline: 2.5rem;
-  border-radius: 1.8rem;
-  border: none;
+.main {
+  display: grid;
+  place-items: center;
+  padding-inline: 2rem;
+  padding-block-start: 2rem;
+  padding-block-end: 4rem;
+  gap: 4rem;
+}
+.main__number {
   font-size: 1rem;
   line-height: 150%;
   letter-spacing: 0px;
+  display: grid;
+  grid-template-rows: auto 3.5rem;
+  position: relative;
+  block-size: 8.5rem;
   font-weight: 900;
-  color: #FAFAFA;
+  color: #87879D;
 }
-button span {
-  color: #8FE3F9;
+.main__number .vertical-line {
+  justify-self: center;
+  width: 1px;
+  background-color: #D1D1DF;
+}
+.main__number .circle {
+  display: grid;
+  place-items: center;
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  border: 1px solid #D1D1DF;
+  border-radius: 50%;
+}
+.main__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.main__images img {
+  border-radius: 0.5rem;
+}
+.main__text-content {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+}
+.main__text-content__title {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.main__text-content__title .small-title {
+  font-size: 1rem;
+  line-height: 110%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4D96A9;
+  font-weight: 800;
+}
+.main__text-content__title .big-title {
+  font-size: clamp(1.5rem, 1.5rem + 3vw, 4rem);
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 900;
+}
+.main__text-content .text {
+  font-size: 1.125rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 700;
+  color: #87879D;
 }
 
 /*# sourceMappingURL=styles.css.map */

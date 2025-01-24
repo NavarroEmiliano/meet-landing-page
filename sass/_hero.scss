@@ -59,19 +59,3 @@
         }
     }
 }
-
-
-button {
-    padding-block: 1rem;
-    padding-inline: 2.5rem;
-    border-radius: 1.8rem;
-    border: none;
-    @include mixins.text-preset-5;
-    font-weight: 900;
-    color: variables.$white;
-
-    span {
-        color: variables.$cyan-300;
-    }
-
-}

@@ -1,0 +1,78 @@
+@use 'mixins';
+@use 'variables'; 
+
+.main {
+    display: grid;
+    place-items: center;
+    padding-inline: 2rem;
+    padding-block-start: 2rem;
+    padding-block-end: 4rem;
+    gap: 4rem;
+
+
+    &__number {
+        @include mixins.text-preset-5;
+        display: grid;
+        grid-template-rows: auto 3.5rem;
+        position: relative;
+        block-size: 8.5rem;
+        font-weight: 900;
+        color: variables.$slate-600;
+        .vertical-line {
+            justify-self: center;
+            width: 1px;
+            background-color: variables.$slate-300;
+        }
+
+        .circle {
+            display: grid;
+            place-items: center;
+            inline-size: 3.5rem;
+            block-size: 3.5rem;
+            border: 1px solid variables.$slate-300;
+            border-radius: 50%;
+        }
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        img {
+            border-radius: 0.5rem;
+        }
+    }
+
+    &__text-content {
+        text-align: center;
+        display: grid;
+        place-items: center;
+        gap: 2rem;
+        &__title {
+            display: grid;
+            place-items: center;
+            gap: 1rem;
+            .small-title {
+                @include mixins.text-preset-3;
+                text-transform: uppercase;
+                color: variables.$cyan-600;
+                font-weight: 800;
+            }
+    
+            .big-title {
+                @include mixins.text-preset-2;
+                font-weight: 900;
+            }
+
+        }
+
+
+
+        .text {
+            @include mixins.text-preset-4;
+            font-weight: 700;
+            color: variables.$slate-600;
+        }
+    }
+}
