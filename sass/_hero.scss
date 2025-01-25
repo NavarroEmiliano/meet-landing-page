@@ -4,7 +4,7 @@
 .hero {
     display: grid;
     place-items: center;
-    padding-block-start: calc(4rem + 3vw);
+    padding-block-start: clamp(4rem, 3rem + 4vw, 5.5rem);
     padding-block-end: clamp(2rem, 2rem + 10vw, 4rem);
     row-gap: clamp(3rem, 3rem + 5vw, 4.5rem);
     overflow-x: hidden;
@@ -12,7 +12,6 @@
     @media (width > 50rem) {
         grid-template-columns: 1fr 30rem 1fr;
         gap: 2rem;
-        padding-block-start: 4rem;
 
         .image-hero-left {
             translate: (-2vw -30px);
