@@ -24,6 +24,8 @@ picture {
 button {
   padding-block: 1rem;
   padding-inline: clamp(0rem, 0rem + 5vw, 2.5rem);
+  display: flex;
+  gap: 0.5rem;
   border-radius: 1.8rem;
   border: none;
   font-size: 1rem;
@@ -80,19 +82,47 @@ button span {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr;
   place-items: center;
-  padding-block-start: 4rem;
-  padding-block-end: 2rem;
+  padding-block-start: calc(4rem + 3vw);
+  padding-block-end: clamp(2rem, 2rem + 10vw, 4rem);
   row-gap: clamp(3rem, 3rem + 5vw, 4.5rem);
   overflow-x: hidden;
 }
+@media (width > 50rem) {
+  .hero {
+    grid-template-columns: 1fr 30rem 1fr;
+    gap: 2rem;
+    padding-block-start: 4rem;
+  }
+  .hero .image-hero-left {
+    translate: -2vw -30px;
+    justify-self: start;
+  }
+  .hero .image-hero-right {
+    translate: 2vw 30px;
+    justify-self: end;
+  }
+}
+.hero .image-hero-left,
+.hero .image-hero-right {
+  display: none;
+}
+@media (width > 50rem) {
+  .hero .image-hero-left,
+  .hero .image-hero-right {
+    display: block;
+  }
+}
 .hero__img-container {
-  /*         inline-size: 115vw;
-  transform: translateX(-7.5vw); */
   display: flex;
   justify-content: center;
   max-block-size: 19rem;
+  transform: scale(1.15);
+}
+@media (width > 50rem) {
+  .hero__img-container {
+    display: none;
+  }
 }
 .hero__content {
   display: flex;
@@ -100,7 +130,7 @@ button span {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
+  margin-inline: clamp(0rem, 5vw, 2rem);
   text-align: center;
   max-inline-size: 28rem;
 }
@@ -125,7 +155,7 @@ button span {
   justify-content: center;
   gap: 1rem;
   inline-size: 100%;
-  max-inline-size: 23rem;
+  max-inline-size: 24rem;
 }
 .hero .buttons :nth-child(1) {
   background-color: #4D96A9;
@@ -139,27 +169,36 @@ button span {
   place-items: center;
   margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
   padding-block-start: 2rem;
-  padding-block-end: 4rem;
+  padding-block-start: clamp(2rem, 0.75rem + 5vw, 3.5rem);
+  padding-block-end: clamp(4rem, 1.5rem + 5vw, 4.5rem);
   gap: 4rem;
 }
 .main__images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: clamp(0.2rem, 0.2rem + 3vw, 2rem);
 }
 .main__images img {
   border-radius: 0.5rem;
+  inline-size: clamp(5rem, 5rem + 15vw, 256px);
+}
+@media (width > 30rem) {
+  .main__images {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .main__text-content {
   text-align: center;
   display: grid;
   place-items: center;
   gap: 2rem;
+  max-inline-size: 34rem;
 }
 .main__text-content__title {
   display: grid;
   place-items: center;
   gap: 1rem;
+  max-inline-size: 28rem;
 }
 .main__text-content__title .small-title {
   font-size: 1rem;
@@ -170,7 +209,7 @@ button span {
   font-weight: 800;
 }
 .main__text-content__title .big-title {
-  font-size: clamp(1.5rem, 1.5rem + 3vw, 4rem);
+  font-size: clamp(1.2rem, 1rem + 5vw, 2.5rem);
   line-height: 110%;
   letter-spacing: 0px;
   font-weight: 900;
@@ -196,8 +235,7 @@ button span {
 }
 .footer__hero {
   position: relative;
-  block-size: 374px;
-  /*     */
+  block-size: clamp(312px, 500px - 30vw, 374px);
   background-image: url(../assets/mobile/image-footer.jpg);
   background-size: cover;
   background-position: center;
@@ -206,7 +244,7 @@ button span {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #855FB1;
+  background-color: #4D96A9;
   opacity: 80%;
 }
 .footer__hero .content {
@@ -214,13 +252,24 @@ button span {
   z-index: 999;
   block-size: 100%;
   display: grid;
+  max-inline-size: 70rem;
   place-items: center;
+  margin: 0 auto;
   gap: 1.5rem;
-  margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
   padding-block: clamp(1rem, 1rem + 5vw, 2rem);
+  padding-inline: 0.5rem;
+}
+@media (width > 76rem) {
+  .footer__hero .content {
+    grid-template-columns: 445px 355px auto;
+    text-align: start;
+  }
+  .footer__hero .content button {
+    margin-inline-start: auto;
+  }
 }
 .footer__hero .title {
-  font-size: clamp(1.5rem, 1.5rem + 3vw, 4rem);
+  font-size: clamp(1.2rem, 1rem + 5vw, 2.5rem);
   line-height: 110%;
   letter-spacing: 0px;
   font-weight: 900;
@@ -231,6 +280,7 @@ button span {
   line-height: 110%;
   letter-spacing: 0px;
   color: #FAFAFA;
+  max-inline-size: 48ch;
 }
 .footer__hero button {
   background-color: #855FB1;

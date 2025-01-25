@@ -15,19 +15,20 @@
         margin-bottom: -28px
     }
 
-    &__hero{
+    &__hero {
         position: relative;
-        block-size: 374px;
-  /*     */
-        background-image: url(../assets/mobile/image-footer.jpg); 
+        block-size: clamp(312px, calc(500px - 30vw), 374px);
+        background-image: url(../assets/mobile/image-footer.jpg);
         background-size: cover;
         background-position: center;
 
-        &__bg-color{
+
+
+        &__bg-color {
             position: absolute;
             height: 100%;
             width: 100%;
-            background-color: variables.$purple-600;
+            background-color: variables.$cyan-600;
             opacity: 80%;
         }
 
@@ -36,10 +37,22 @@
             z-index: 999;
             block-size: 100%;
             display: grid;
+            max-inline-size: 70rem;
             place-items: center;
+            margin: 0 auto;
             gap: 1.5rem;
-            margin-inline: clamp(0rem,0rem + 5vw, 2rem);
-            padding-block: clamp(1rem,1rem + 5vw, 2rem);
+            padding-block: clamp(1rem, 1rem + 5vw, 2rem);
+            padding-inline: 0.5rem;
+
+
+            @media (width > 76rem) {
+                grid-template-columns: 445px 355px auto;
+                text-align: start;
+
+                button {
+                    margin-inline-start: auto
+                }
+            }
         }
 
         .title {
@@ -51,13 +64,13 @@
         .text {
             @include mixins.text-preset-4;
             color: variables.$white;
-
-
-        }   
+            max-inline-size: 48ch;
+        }
 
         button {
             background-color: variables.$purple-600;
         }
+
     }
 
 

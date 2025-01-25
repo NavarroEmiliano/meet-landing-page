@@ -3,19 +3,46 @@
 
 .hero {
     display: grid;
-    grid-template-columns: 1fr;
     place-items: center;
-    padding-block-start: 4rem;
-    padding-block-end: 2rem;
+    padding-block-start: calc(4rem + 3vw);
+    padding-block-end: clamp(2rem, 2rem + 10vw, 4rem);
     row-gap: clamp(3rem, 3rem + 5vw, 4.5rem);
     overflow-x: hidden;
 
+    @media (width > 50rem) {
+        grid-template-columns: 1fr 30rem 1fr;
+        gap: 2rem;
+        padding-block-start: 4rem;
+
+        .image-hero-left {
+            translate: (-2vw -30px);
+            justify-self: start;
+        }
+
+        .image-hero-right {
+            translate: (2vw 30px);
+            justify-self: end;
+        }
+    }
+
+    .image-hero-left,
+    .image-hero-right {
+        display: none;
+
+        @media (width > 50rem) {
+            display: block;
+        }
+    }
+
     &__img-container {
-        /*         inline-size: 115vw;
-        transform: translateX(-7.5vw); */
         display: flex;
         justify-content: center;
         max-block-size: 19rem;
+        transform: scale(1.15);
+
+        @media (width > 50rem) {
+            display: none;
+        }
     }
 
     &__content {
@@ -24,12 +51,12 @@
         justify-content: center;
         align-items: center;
         gap: 1.5rem;
-        margin-inline: clamp(0rem,0rem + 5vw, 2rem);
+        margin-inline: clamp(0rem, 5vw, 2rem);
         text-align: center;
         max-inline-size: 28rem;
 
         h1 {
-            @include mixins.text-preset-2;
+            @include mixins.text-preset-1;
             font-weight: 900;
             max-width: 10ch;
             color: variables.$slate-900;
@@ -48,7 +75,7 @@
         justify-content: center;
         gap: 1rem;
         inline-size: 100%;
-        max-inline-size: 23rem;
+        max-inline-size: 24rem;
 
         :nth-child(1) {
             background-color: variables.$cyan-600;
