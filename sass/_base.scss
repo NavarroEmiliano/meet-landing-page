@@ -28,7 +28,7 @@ picture {
 
 button {
     padding-block: 1rem;
-    padding-inline: 2.5rem;
+    padding-inline: clamp(0rem,0rem + 5vw, 2.5rem);
     border-radius: 1.8rem;
     border: none;
     @include mixins.text-preset-5;

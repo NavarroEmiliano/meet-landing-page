@@ -23,7 +23,7 @@ picture {
 
 button {
   padding-block: 1rem;
-  padding-inline: 2.5rem;
+  padding-inline: clamp(0rem, 0rem + 5vw, 2.5rem);
   border-radius: 1.8rem;
   border: none;
   font-size: 1rem;
@@ -100,7 +100,7 @@ button span {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  margin-inline: 2rem;
+  margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
   text-align: center;
   max-inline-size: 28rem;
 }
@@ -137,7 +137,7 @@ button span {
 .main {
   display: grid;
   place-items: center;
-  padding-inline: 2rem;
+  margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
   padding-block-start: 2rem;
   padding-block-end: 4rem;
   gap: 4rem;
@@ -196,7 +196,7 @@ button span {
 }
 .footer__hero {
   position: relative;
-  height: 374px;
+  block-size: 374px;
   /*     */
   background-image: url(../assets/mobile/image-footer.jpg);
   background-size: cover;
@@ -216,8 +216,8 @@ button span {
   display: grid;
   place-items: center;
   gap: 1.5rem;
-  padding-inline: 2rem;
-  padding-block: 4rem;
+  margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
+  padding-block: clamp(1rem, 1rem + 5vw, 2rem);
 }
 .footer__hero .title {
   font-size: clamp(1.5rem, 1.5rem + 3vw, 4rem);
