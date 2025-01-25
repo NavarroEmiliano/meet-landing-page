@@ -17,4 +17,4 @@
 node_modules
 README-template.md
 preview.jpg
-./public/css
+public/css/
