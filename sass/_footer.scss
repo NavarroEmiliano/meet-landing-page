@@ -2,7 +2,6 @@
 @use 'mixins';
 
 
-
 .footer {
     position: relative;
     display: flex;
@@ -10,19 +9,38 @@
     flex-direction: column;
     text-align: center;
 
+
     .number {
+        z-index: 999;
         margin-bottom: -28px
     }
 
-    &__content {
-        display: grid;
-        place-items: center;
-        gap: 1.5rem;
+    &__hero{
+        position: relative;
         height: 374px;
-        padding-inline: 2rem;
-        padding-block: 4rem;
+  /*     */
+        background-image: url(../assets/mobile/image-footer.jpg); 
+        background-size: cover;
+        background-position: center;
 
-  
+        &__bg-color{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: variables.$purple-600;
+            opacity: 80%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 999;
+            block-size: 100%;
+            display: grid;
+            place-items: center;
+            gap: 1.5rem;
+            padding-inline: 2rem;
+            padding-block: 4rem;
+        }
 
         .title {
             @include mixins.text-preset-2;
@@ -30,19 +48,12 @@
             color: variables.$white;
         }
 
-        .img-container {
-            position: absolute;
-            background-color: red;
-            width: 100%;
-            block-size: 374px;
-            inset-block-end: 0;
-            z-index: -1;
-        }
+        .text {
+            @include mixins.text-preset-4;
+            color: variables.$white;
 
-        .bg-image {
-            block-size: auto;
-            object-fit: cover;
-        }
+
+        }   
 
         button {
             background-color: variables.$purple-600;
