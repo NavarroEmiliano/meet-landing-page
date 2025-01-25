@@ -49,7 +49,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
+        gap:  clamp(1.5rem, 1.5rem + 2vw, 2rem);
         margin-inline: clamp(0rem, 3vw, 2rem);
         text-align: center;
         max-inline-size: 28rem;
