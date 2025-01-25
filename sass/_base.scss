@@ -25,6 +25,13 @@ picture {
 }
 
 
+.container {
+    display: grid;
+    min-block-size: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+
 
 button {
     padding-block: 1rem;
