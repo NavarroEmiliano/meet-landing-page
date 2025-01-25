@@ -69,6 +69,16 @@
 
         button {
             background-color: variables.$purple-600;
+
+            &:hover {
+                background-color: variables.$purple-hover;
+                cursor: pointer;
+
+                * {
+                    background-color: variables.$purple-hover;
+
+                }
+            }
         }
 
     }

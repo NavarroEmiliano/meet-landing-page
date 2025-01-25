@@ -160,15 +160,28 @@ button span {
 .hero .buttons :nth-child(1) {
   background-color: #4D96A9;
 }
+.hero .buttons :nth-child(1):hover {
+  background-color: #71C0D4;
+  cursor: pointer;
+}
+.hero .buttons :nth-child(1):hover * {
+  background-color: #71C0D4;
+}
 .hero .buttons :nth-child(2) {
   background-color: #855FB1;
+}
+.hero .buttons :nth-child(2):hover {
+  background-color: #B18BDD;
+  cursor: pointer;
+}
+.hero .buttons :nth-child(2):hover * {
+  background-color: #B18BDD;
 }
 
 .main {
   display: grid;
   place-items: center;
   margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
-  padding-block-start: 2rem;
   padding-block-start: clamp(2rem, 0.75rem + 5vw, 3.5rem);
   padding-block-end: clamp(4rem, 1.5rem + 5vw, 4.5rem);
   gap: 4rem;
@@ -181,6 +194,10 @@ button span {
 .main__images img {
   border-radius: 0.5rem;
   inline-size: clamp(5rem, 5rem + 15vw, 256px);
+}
+.main__images img:hover {
+  transform: scale(1.025);
+  transition: all 100ms ease-out;
 }
 @media (width > 30rem) {
   .main__images {
@@ -284,6 +301,13 @@ button span {
 }
 .footer__hero button {
   background-color: #855FB1;
+}
+.footer__hero button:hover {
+  background-color: #B18BDD;
+  cursor: pointer;
+}
+.footer__hero button:hover * {
+  background-color: #B18BDD;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,16 @@
+{
+  "name": "meet-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass public/sass:public/css",
+    "sass:watch": "sass --watch public/sass:public/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}

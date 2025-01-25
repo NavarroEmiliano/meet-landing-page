@@ -79,10 +79,31 @@
 
         :nth-child(1) {
             background-color: variables.$cyan-600;
+
+            &:hover {
+                background-color: variables.$blue-hover;
+                cursor: pointer;
+
+                * {
+                    background-color: variables.$blue-hover;
+
+                }
+            }
         }
+
 
         :nth-child(2) {
             background-color: variables.$purple-600;
+
+            &:hover {
+                background-color: variables.$purple-hover;
+                cursor: pointer;
+
+                * {
+                    background-color: variables.$purple-hover;
+
+                }
+            }
         }
     }
 }
