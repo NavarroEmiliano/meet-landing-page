@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", serif;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-block-size: 100vh;
+}
+
+img,
+picture {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+button {
+  padding-block: 1rem;
+  padding-inline: clamp(0rem, 0rem + 5vw, 2.5rem);
+  display: flex;
+  gap: 0.5rem;
+  border-radius: 1.8rem;
+  border: none;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-weight: 900;
+  color: #FAFAFA;
+}
+button span {
+  color: #8FE3F9;
+}
+
+.number {
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto 3.5rem;
+  position: relative;
+  block-size: 8.5rem;
+  font-weight: 900;
+  color: #87879D;
+}
+.number .vertical-line {
+  justify-self: center;
+  width: 1px;
+  background-color: #D1D1DF;
+}
+.number .circle {
+  display: grid;
+  place-items: center;
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  border: 1px solid #D1D1DF;
+  border-radius: 50%;
+  background-color: #FAFAFA;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  block-size: 4.75rem;
+}
+.header__logo {
+  block-size: 28px;
+}
+@media (width > 48rem) {
+  .header {
+    block-size: 6.75rem;
+  }
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  padding-block-start: calc(4rem + 3vw);
+  padding-block-end: clamp(2rem, 2rem + 10vw, 4rem);
+  row-gap: clamp(3rem, 3rem + 5vw, 4.5rem);
+  overflow-x: hidden;
+}
+@media (width > 50rem) {
+  .hero {
+    grid-template-columns: 1fr 30rem 1fr;
+    gap: 2rem;
+    padding-block-start: 4rem;
+  }
+  .hero .image-hero-left {
+    translate: -2vw -30px;
+    justify-self: start;
+  }
+  .hero .image-hero-right {
+    translate: 2vw 30px;
+    justify-self: end;
+  }
+}
+.hero .image-hero-left,
+.hero .image-hero-right {
+  display: none;
+}
+@media (width > 50rem) {
+  .hero .image-hero-left,
+  .hero .image-hero-right {
+    display: block;
+  }
+}
+.hero__img-container {
+  display: flex;
+  justify-content: center;
+  max-block-size: 19rem;
+  transform: scale(1.15);
+}
+@media (width > 50rem) {
+  .hero__img-container {
+    display: none;
+  }
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-inline: clamp(0rem, 5vw, 2rem);
+  text-align: center;
+  max-inline-size: 28rem;
+}
+.hero__content h1 {
+  font-size: clamp(1.5rem, 1.5rem + 3vw, 4rem);
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 900;
+  max-width: 10ch;
+  color: #28283D;
+}
+.hero__content h2 {
+  font-size: 1.125rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 400;
+  color: #87879D;
+}
+.hero .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  inline-size: 100%;
+  max-inline-size: 24rem;
+}
+.hero .buttons :nth-child(1) {
+  background-color: #4D96A9;
+}
+.hero .buttons :nth-child(1):hover {
+  background-color: #71C0D4;
+  cursor: pointer;
+}
+.hero .buttons :nth-child(1):hover * {
+  background-color: #71C0D4;
+}
+.hero .buttons :nth-child(2) {
+  background-color: #855FB1;
+}
+.hero .buttons :nth-child(2):hover {
+  background-color: #B18BDD;
+  cursor: pointer;
+}
+.hero .buttons :nth-child(2):hover * {
+  background-color: #B18BDD;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  margin-inline: clamp(0rem, 0rem + 5vw, 2rem);
+  padding-block-start: clamp(2rem, 0.75rem + 5vw, 3.5rem);
+  padding-block-end: clamp(4rem, 1.5rem + 5vw, 4.5rem);
+  gap: 4rem;
+}
+.main__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.2rem, 0.2rem + 3vw, 2rem);
+}
+.main__images img {
+  border-radius: 0.5rem;
+  inline-size: clamp(5rem, 5rem + 15vw, 256px);
+}
+.main__images img:hover {
+  transform: scale(1.025);
+  transition: all 100ms ease-out;
+}
+@media (width > 30rem) {
+  .main__images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.main__text-content {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 2rem;
+  max-inline-size: 34rem;
+}
+.main__text-content__title {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  max-inline-size: 28rem;
+}
+.main__text-content__title .small-title {
+  font-size: 1rem;
+  line-height: 110%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4D96A9;
+  font-weight: 800;
+}
+.main__text-content__title .big-title {
+  font-size: clamp(1.2rem, 1rem + 5vw, 2.5rem);
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 900;
+}
+.main__text-content .text {
+  font-size: 1.125rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 700;
+  color: #87879D;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  inline-size: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+.footer .number {
+  z-index: 999;
+  margin-bottom: -28px;
+}
+.footer__hero {
+  position: relative;
+  block-size: clamp(312px, 500px - 30vw, 374px);
+  background-image: url(../assets/mobile/image-footer.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.footer__hero__bg-color {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #4D96A9;
+  opacity: 80%;
+}
+.footer__hero .content {
+  position: relative;
+  z-index: 999;
+  block-size: 100%;
+  display: grid;
+  max-inline-size: 70rem;
+  place-items: center;
+  margin: 0 auto;
+  gap: 1.5rem;
+  padding-block: clamp(1rem, 1rem + 5vw, 2rem);
+  padding-inline: 0.5rem;
+}
+@media (width > 76rem) {
+  .footer__hero .content {
+    grid-template-columns: 445px 355px auto;
+    text-align: start;
+  }
+  .footer__hero .content button {
+    margin-inline-start: auto;
+  }
+}
+.footer__hero .title {
+  font-size: clamp(1.2rem, 1rem + 5vw, 2.5rem);
+  line-height: 110%;
+  letter-spacing: 0px;
+  font-weight: 900;
+  color: #FAFAFA;
+}
+.footer__hero .text {
+  font-size: 1.125rem;
+  line-height: 110%;
+  letter-spacing: 0px;
+  color: #FAFAFA;
+  max-inline-size: 48ch;
+}
+.footer__hero button {
+  background-color: #855FB1;
+}
+.footer__hero button:hover {
+  background-color: #B18BDD;
+  cursor: pointer;
+}
+.footer__hero button:hover * {
+  background-color: #B18BDD;
+}
+
+/*# sourceMappingURL=styles.css.map */
