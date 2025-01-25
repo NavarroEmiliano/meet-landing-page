@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass:build": "sass public/sass:public/css",
-    "sass:watch": "sass --watch public/sass:public/css"
+    "sass:build": "sass sass:./public/css",
+    "sass:watch": "sass --watch sass:public/css"
   },
   "keywords": [],
   "author": "",
